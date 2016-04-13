@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tripester!</title>
+ <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Tripester</h1>
+        <nav>
+          <ul>
+            <li><a href="#">LA</a></li>
+            <li><a href="#">NYC</a></li>
+            <li><a href="#">DC</a></li>
+            <li><a href="#">London</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <main>
+      <div class="container">
+          <form>
+            <input type="text" id="city-type" placeholder="Enter a city name...">
+            <input type="submit" value="Update" id="submit-btn">
+          </form>
+      </div>
+      <iframe id="LA" src="https://www.google.com/maps/d/u/0/embed?mid=zcXF_fwcz7TM.ktQCv3EUwBqU" width="640" height="480"></iframe>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+      <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+        <script src="js/index.js"></script>
+
+        <form id="suggest">
+        <h4> Know a place we would love? Let us know! </h4>
+        <input type="text" name="Location">
+        <input type="text" name="Comment">
+        <select name="city">
+          <option value="select">Select City</option>
+          <option value="LA">LA</option>
+          <option value="NYC">NYC</option>
+          <option value="DC">DC</option>
+          <option value="New City">New City</option>
+        </select>  
+        <input type="submit" value="Submit!">
+      </form>
+  </main>
+</body>
+</html>
