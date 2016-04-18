@@ -13,30 +13,40 @@
         <h1 class="logo">Tripester</h1>
         <nav>
           <ul>
-            <li><a href="#">LA</a></li>
-            <li><a href="#">NYC</a></li>
-            <li><a href="#">DC</a></li>
-            <li><a href="#">London</a></li>
+            <li><button id='LA' class='btn'>LA</button></li>
+            <li><button id='NY' class='btn'>NYC</button></li>
+            <li><button id='DC' class='btn'>DC</button></li>
           </ul>
         </nav>
       </div>
-    </header>
-  <main>
+  </header>
+  <main class="clearfix">
+    <div class="buttons">
+          <button id="prev" class="button"> ◀ Previous </button>
+          <button id="next" class="button">  Next ▶</button>
+    </div>
+  
+    <div id="carousel-view">
+          <img id="carousel" src="images/LA.jpg"/>
+    </div>
+
+
       <div class="container">
           <form>
-            <input type="text" id="city-type" placeholder="Enter a city name...">
+            <input type="text" id="city-type" placeholder="Search for a city map..">
             <input type="submit" value="Update" id="submit-btn">
           </form>
       </div>
-      <iframe id="LA" src="https://www.google.com/maps/d/u/0/embed?mid=zcXF_fwcz7TM.ktQCv3EUwBqU" width="640" height="480"></iframe>
-        <script src="http://maps.googleapis.com/maps/api/js"></script>
-      <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-        <script src="js/index.js"></script>
-
+      <div id="box" class="clearfix">
+      <section>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=zcXF_fwcz7TM.ktQCv3EUwBqU"></iframe>
+      </section>
+      <aside> 
+        <div id="error" class="error hide"></div>
         <form id="suggest">
         <h4> Know a place we would love? Let us know! </h4>
-        <input type="text" name="Location">
-        <input type="text" name="Comment">
+        <input type="text" name="location" placeholder="Location" class="form">
+        <input type="text" name="comment" placeholder="Description" class="form">
         <select name="city">
           <option value="select">Select City</option>
           <option value="LA">LA</option>
@@ -44,8 +54,15 @@
           <option value="DC">DC</option>
           <option value="New City">New City</option>
         </select>  
-        <input type="submit" value="Submit!">
-      </form>
+        <input type="submit" value="Submit!" id="submit">
+         </form>
+        <div id="success" class="success hide"></div>
+
+      </aside>
+    </div>
   </main>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
